@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Job - HireFlow</title>
+</head>
+<body>
+    <form th:action="@{/jobs}" th:object="${job}" method="post">
+        <p>Title: <input type="text" th:field="*{title}"></p>
+        <p>Company: <input type="text" th:field="*{company}"></p>
+        <p>Location: <input type="text" th:field="*{location}"></p>
+        <p>Salary: <input type="number" th:field="*{salary}"></p>
+        <button type="submit">Submit</button>
+    </form>
+    <a th:href="@{/jobs}">Cancel</a>
+</body>
+</html>

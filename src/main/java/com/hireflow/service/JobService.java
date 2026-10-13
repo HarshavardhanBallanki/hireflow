@@ -22,4 +22,12 @@ public class JobService {
     public Job findById(Long id) {
         return jobRepository.findById(id).orElseThrow(() -> new RuntimeException("Job not found " + id));
     }
+
+    public Job save(Job job) {
+        return jobRepository.save(job);
+    }
+
+    public void deleteById(Long id) {
+        jobRepository.deleteById(id);
+    }
 }
