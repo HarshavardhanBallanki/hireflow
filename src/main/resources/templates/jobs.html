@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jobs - HireFlow</title>
+</head>
+<body>
+    <h1>Open Jobs</h1>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Title</th><th>Company</th><th>Location</th><th>Salary</th>
+    </tr>
+    <tr th:each="job : ${jobs} ">
+        <td><a th:href="@{/jobs/{id}(id=${job.id})}" th:text="${job.title}">Title</a></td>
+        <td th:text="${job.company}">Company</td>
+        <td th:text="${job.location}">Location</td>
+        <td th:text="${job.salary}">0</td>
+    </tr>
+</table>
+</body>
+</html>

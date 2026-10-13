@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Details - HireFlow</title>
+</head>
+<body>
+    <h1 th:text="${job.title}">Title</h1>
+    <p>Company: <span th:text="${job.company}"></span></p>
+    <p>Location: <span th:text="${job.location}"></span></p>
+    <p>Salary: <span th:text="${job.salary}"></span></p>
+    <a th:href="${jobs}">Back to jobs</a>
+</body>
+</html>
