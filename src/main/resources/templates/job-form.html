@@ -12,6 +12,7 @@
         <p>Salary: <input type="number" th:field="*{salary}"></p>
         <button type="submit">Submit</button>
     </form>
+    <input type="hidden" th:field="*{id}">
     <a th:href="@{/jobs}">Cancel</a>
 </body>
 </html>

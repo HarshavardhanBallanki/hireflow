@@ -44,6 +44,7 @@ public class JobController {
 
     @GetMapping("/jobs/{id}/edit")
     public String editJobForm(@PathVariable Long id, Model model) {
+        model.addAttribute("job", jobService.findById(id));
         return "job-form";
     }
 
